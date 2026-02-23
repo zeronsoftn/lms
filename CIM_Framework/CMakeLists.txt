@@ -127,8 +127,8 @@ else (UNIX)
 endif (UNIX)
 
 find_package (Threads REQUIRED)
-set_property (TARGET WSMAN
-  PROPERTY INTERFACE_LINK_LIBRARIES
+target_link_libraries (WSMAN
+  INTERFACE
   Threads::Threads ${LIBXML2_LIBRARIES}
 )
 
